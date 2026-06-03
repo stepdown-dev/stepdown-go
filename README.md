@@ -51,7 +51,7 @@ Read it straight down: the type, then how you build it, then what it does, with 
 ## Usage
 
 ```
-go run stepdown.dev/go/cmd/stepdown@v0.1.1 ./...
+go run stepdown.dev/go/cmd/stepdown@v0.1.3 ./...
 ```
 
 Drop that into a CI step, or run it from a clone with `go run ./cmd/stepdown ./...`. It takes Go package patterns and analyzes the non-test, non-generated files in the default build.

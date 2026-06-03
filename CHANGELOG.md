@@ -4,6 +4,17 @@ All notable changes to this project are documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v0.1.3] - 2026-06-03
+
+Documentation and help maintenance release. No analyzer behavior, grammar,
+diagnostic, fixture policy, waiver posture, or invocation semantics changed.
+
+### Changed
+
+- Public README, command help, tests, and active toolchain-contract specs now
+  show the current `go run stepdown.dev/go/cmd/stepdown@v0.1.3 ./...`
+  consumption pin.
+
 ## [v0.1.2] - 2026-06-03
 
 Maintenance release. No analyzer behavior, grammar, diagnostic, fixture policy,
@@ -41,6 +52,7 @@ Initial release. `stepdown` enforces top-down declaration order in Go source fil
 - Self-policing: `stepdown` runs against its own source as part of verification.
 - Apache 2.0 license.
 
+[v0.1.3]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.3
 [v0.1.2]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.2
 [v0.1.1]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.0

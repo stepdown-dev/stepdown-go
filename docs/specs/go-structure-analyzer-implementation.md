@@ -32,7 +32,7 @@ This spec is an implementation translation. ADR-0001 remains canonical for tool 
 
 - The accepted ADR's Go grammar is complete enough for v0.1.0 implementation.
 - The first implementation uses Go packages available through the standard Go toolchain plus `golang.org/x/tools/go/packages`.
-- The command accepts explicit package patterns. `go run stepdown.dev/go/cmd/stepdown@v0.1.1 ./...` is the release invocation model.
+- The command accepts explicit package patterns. `go run stepdown.dev/go/cmd/stepdown@v0.1.3 ./...` is the release invocation model.
 - A zero-argument command is a tool usage error and exits `2`; ADR-0001 documents explicit package-pattern usage and does not authorize an implicit default.
 - The self-policing gate can run only after the command builds and can analyze its own source without relying on an already released tag.
 
@@ -92,7 +92,7 @@ This map translates each load-bearing ADR-0001 requirement into implementation r
 | Sparse fixture-driven tests. | One harness discovers fixture directories and asserts zero diagnostics. No per-case expected diagnostic table. Internal tests only cover tool/load error plumbing. | Test review. |
 | Diagnostic format and rule names. | Emit `file:line:column: <rule-name>: <description>` using stable ADR rule-name constants. | Diagnostic formatting test; command run. |
 | Exit codes. | `0` clean, `1` findings, `2` tool/load error. | CLI tests. |
-| Pinning mechanism. | README documents `go run stepdown.dev/go/cmd/stepdown@v0.1.1 ./...`; no installed-binary version command in v0.1.0. | README review. |
+| Pinning mechanism. | README documents `go run stepdown.dev/go/cmd/stepdown@v0.1.3 ./...`; no installed-binary version command in v0.1.0. | README review. |
 | Evolution, removal, deprecation, and maintainer risk. | README/CONTRIBUTING preserve ADR-driven new-rule process, no waivers, no configuration creep, and maintainer succession posture. | Docs review. |
 
 ## Positive Grammar Walker Requirement
@@ -460,7 +460,7 @@ Founder Chief Architect closeout:
 Release shape:
 
 - v0.1.0 implementation completes only after all implementation units pass review and audit.
-- Public usage remains `go run stepdown.dev/go/cmd/stepdown@v0.1.1 ./...`.
+- Public usage remains `go run stepdown.dev/go/cmd/stepdown@v0.1.3 ./...`.
 - Consumer adoption is separate and requires consumer-side records.
 
 Recovery:
