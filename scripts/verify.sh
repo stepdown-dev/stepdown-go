@@ -3,9 +3,9 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
-go version | grep -Eq 'go1\.26\.3'
+go version | grep -Eq 'go1\.26\.4'
 test "$(go env GOTOOLCHAIN)" = "local"
-grep -Eq '^go 1\.26\.3$' go.mod
+grep -Eq '^go 1\.26\.4$' go.mod
 go test ./...
 go run ./cmd/stepdown -h >/dev/null
 go run ./cmd/stepdown --help >/dev/null

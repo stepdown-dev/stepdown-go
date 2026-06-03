@@ -378,9 +378,9 @@ Verification does not prove:
 
 Toolchain contract:
 
-- `stepdown/go.mod` declares `go 1.26.3`.
-- Implementation verification runs under Go 1.26.3.
-- Local verification uses the environment-resolved `go` command only when `go version` reports `go1.26.3` and `go env GOTOOLCHAIN` reports `local`.
+- `stepdown/go.mod` declares `go 1.26.4`.
+- Implementation verification runs under Go 1.26.4.
+- Local verification uses the environment-resolved `go` command only when `go version` reports `go1.26.4` and `go env GOTOOLCHAIN` reports `local`.
 - If either local toolchain check fails, verification stops until the canonical local toolchain path is used or repaired. Verification does not proceed through toolchain auto-download or a different Go version.
 
 Required verification surfaces:
@@ -389,7 +389,7 @@ Required verification surfaces:
 cd /path/to/stepdown
 go version
 go env GOTOOLCHAIN
-rg -n '^go 1\.26\.3$' go.mod
+rg -n '^go 1\.26\.4$' go.mod
 go test ./...
 go run ./cmd/stepdown ./testdata/...
 go run ./cmd/stepdown ./...

@@ -4,6 +4,17 @@ All notable changes to this project are documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v0.1.2] - 2026-06-03
+
+Maintenance release. No analyzer behavior, grammar, diagnostic, fixture policy,
+or public invocation changes.
+
+### Changed
+
+- Local and CI verification now run under Go 1.26.4, preserving the Go 1.26
+  line while moving off the vulnerable 1.26.3 patch.
+- Toolchain contract docs and verification fixtures now reflect Go 1.26.4.
+
 ## [v0.1.1] - 2026-05-31
 
 Rehomed. No functional or grammar changes.
@@ -30,5 +41,6 @@ Initial release. `stepdown` enforces top-down declaration order in Go source fil
 - Self-policing: `stepdown` runs against its own source as part of verification.
 - Apache 2.0 license.
 
+[v0.1.2]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.2
 [v0.1.1]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.1
 [v0.1.0]: https://github.com/stepdown-dev/stepdown-go/releases/tag/v0.1.0

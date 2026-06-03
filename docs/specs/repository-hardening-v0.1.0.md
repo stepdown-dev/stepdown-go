@@ -23,7 +23,7 @@ Affected readers are maintainers, contributors, security reporters, and release 
 ## Assumptions
 
 - The repository is `github.com/stepdown-dev/stepdown-go` and the module path is the vanity `stepdown.dev/go`; the steward-org token is locator metadata, not tool semantics.
-- `go.mod` declares `go 1.26.3`.
+- `go.mod` declares `go 1.26.4`.
 - The maintainer GitHub handle for ownership routing is `@johnastinnett`.
 - Private security disclosure uses GitHub Private Security Advisories.
 - Contributor Covenant enforcement reports go to `john.a.stinnett@gmail.com`.
@@ -201,7 +201,7 @@ formatters:
 
 ### `.github/workflows/verify.yml`
 
-Policy property: every pushed commit and pull request executes the same local verification contract under Go 1.26.3.
+Policy property: every pushed commit and pull request executes the same local verification contract under Go 1.26.4.
 
 Required shape:
 
@@ -381,7 +381,7 @@ Repository-hardening progression:
 Invariants:
 
 - `scripts/verify.sh` is the only verification command CI calls.
-- Go version remains 1.26.3.
+- Go version remains 1.26.4.
 - `GOTOOLCHAIN=local` remains required.
 - Tool versions are pinned: `golangci-lint` `v2.12.2`, `govulncheck` `v1.3.0`, `actions/checkout` `v6.0.2`, `actions/setup-go` `v6.4.0`.
 - External service activation remains outside the repository diff.

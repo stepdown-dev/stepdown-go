@@ -53,7 +53,7 @@ func module(t *testing.T) string {
 	t.Helper()
 
 	root := t.TempDir()
-	write(t, root, "go.mod", "module example.com/alpha\n\ngo 1.26.3\n")
+	write(t, root, "go.mod", "module example.com/alpha\n\ngo 1.26.4\n")
 	return root
 }
 
